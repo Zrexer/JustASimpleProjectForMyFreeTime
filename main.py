@@ -5,6 +5,7 @@ import tkinter.messagebox
 from tkinter.constants import SUNKEN
 from subprocess import getoutput
 from time import sleep
+import wikipedia
 
 system("cls")
 
@@ -26,6 +27,7 @@ print(f"""
 {f.GREEN}[{f.YELLOW}4{f.GREEN}]{f.YELLOW} Github 
 {f.GREEN}[{f.YELLOW}5{f.GREEN}]{f.YELLOW} Open File And Write
 {f.GREEN}[{f.YELLOW}6{f.GREEN}]{f.YELLOW} Get Your ClipBoard
+{f.GREEN}[{f.YELLOW}7{f.GREEN}]{f.YELLOW} Search Wikipedia
  """)
 
 x = int(input(f"{f.LIGHTGREEN_EX}set{f.WHITE}> "))
@@ -140,6 +142,10 @@ elif x == 6:
     print(f"{f.GREEN}{gtclp}")
     print("")
 
+elif x == 7:
+    sea = str(input(f"{f.GREEN}search{f.WHITE}> "))
+    wksea = wikipedia.search(sea)
+    print(wksea)
 
 else:
     print("")
